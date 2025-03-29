@@ -1,0 +1,28 @@
+.list {
+  flex-wrap: wrap;
+  max-width: 1260px;
+  gap: 20px;
+}
+.movieLi {
+  width: 300px;
+  border: 2px solid  white;;
+}
+
+.cardDescr {
+  padding: 10px;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+.title_div{
+  display: flex;
+  justify-content: center;
+}
+a{
+  display: flex;
+  justify-content: center;
+
+}
