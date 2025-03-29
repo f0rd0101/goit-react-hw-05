@@ -1,11 +1,13 @@
 .list {
+  display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   max-width: 1260px;
   gap: 20px;
 }
 .movieLi {
   width: 300px;
-  border: 2px solid  white;;
+  border: 2px solid #0a2351;
 }
 
 .cardDescr {
@@ -14,15 +16,6 @@
 
 .title {
   text-align: center;
-  color: white;
+  color: #0a2351;
   margin-bottom: 10px;
-}
-.title_div{
-  display: flex;
-  justify-content: center;
-}
-a{
-  display: flex;
-  justify-content: center;
-
 }

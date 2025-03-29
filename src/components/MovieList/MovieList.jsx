@@ -11,7 +11,7 @@ const MovieList = ({ movies }) => {
         {movies.map((movie) => (
           <li key={movie.id} className={s.movieLi}>
             <Link to={`/movie/${movie.id}`} state={location}>
-              <div  >
+              <div>
                 <img
                   src={
                     movie.poster_path

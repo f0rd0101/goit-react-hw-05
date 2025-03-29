@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchCastsById } from "../../MovieTrend";
+import { fetchCastsById } from "../../services/api";
 import s from "./MovieCast.module.css";
 import "swiper/css";
 import "swiper/css/navigation";

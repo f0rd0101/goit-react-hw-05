@@ -1,0 +1,18 @@
+.reviews {
+  padding: 10px 20px;
+}
+.review {
+  border-radius: 8px;
+  border: 2px solid #000000;
+  padding: 12px;
+  margin-bottom: 20px;
+}
+.author {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.text {
+  font-size: 18px;
+}
