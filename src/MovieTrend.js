@@ -11,3 +11,7 @@ export const fetchTrendMovie = async () => {
     const { data } = await axios.get("https://api.themoviedb.org/3/trending/movie/day", options);
     return data.results;
 }
+export const fetchCastsById = async (movieId) => {
+    const {data} = await axios.get(`movie/${movieId}/credits`, options);
+  return data.cast; 
+  };
