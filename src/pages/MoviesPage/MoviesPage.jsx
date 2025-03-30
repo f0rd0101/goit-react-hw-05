@@ -40,13 +40,7 @@ const MoviesPage = () => {
     values.query = "";
   };
 
-  const filteredMovies = useMemo(
-    () =>
-      movies.filter((movie) =>
-        movie.title.toLowerCase().includes(query.toLowerCase())
-      ),
-    [query, movies]
-  );
+
   return (
     <>
       <div className={s.search}>
@@ -66,7 +60,7 @@ const MoviesPage = () => {
         </Formik>
       </div>
       <div className={s.moviesWrap}>
-        <MovieList movies={filteredMovies} />
+        <MovieList  />
       </div>
     </>
   );
