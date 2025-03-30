@@ -2,18 +2,17 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import { Field, Form, Formik } from "formik";
 import { Toaster } from "react-hot-toast";
 import s from "./MoviesPage.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MovieList from "../../components/MovieList/MovieList";
 import { useSearchParams } from "react-router-dom";
 import { fetchMovieByQuery } from "../../services/api";
-import { useEffect } from "react";
-import { useMemo } from "react";
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
 
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get("query") ?? "";
+
   useEffect(() => {
     const getData = async () => {
       const data = await fetchMovieByQuery(query);
@@ -35,11 +34,14 @@ const MoviesPage = () => {
   };
 
   const handleSubmit = (values) => {
-    console.log(values);
     handleChangeQuery(values.query);
-    values.query = "";
+    values.query = ""; 
   };
 
+
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(query.toLowerCase())
+  );
 
   return (
     <>
@@ -60,7 +62,7 @@ const MoviesPage = () => {
         </Formik>
       </div>
       <div className={s.moviesWrap}>
-        <MovieList  />
+        <MovieList movies={filteredMovies} />
       </div>
     </>
   );
